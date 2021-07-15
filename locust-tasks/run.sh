@@ -15,7 +15,7 @@
 # limitations under the License.
 
 LOCUST="/usr/local/bin/locust"
-LOCUS_OPTS="-f /locust-tasks/locust-example.py"
+LOCUS_OPTS="-f /locust-tasks/locustfile.py"
 LOCUST_MODE=${LOCUST_MODE:-standalone}
 
 if [[ "$LOCUST_MODE" = "master" ]]; then
