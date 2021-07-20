@@ -3,7 +3,7 @@ version: 0.1
 phases:
   pre_build:
     commands:
-      - pip insall --upgrade pip
+      - pip install --upgrade pip
       - pip install pyquery
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
