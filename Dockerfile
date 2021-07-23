@@ -11,7 +11,6 @@ RUN mkdir -p "$DT_HOME" && \
     unzip -d "$DT_HOME" "$DT_HOME/oneagent.zip" && \
     rm "$DT_HOME/oneagent.zip"
 ENTRYPOINT [ "/opt/dynatrace/oneagent/dynatrace-agent64.sh" ]
-CMD [ "executable", "param1", "param2" ] # the command of your application, for example, Java
 RUN chmod +x /locust-tasks/run.sh
 # CMD ["/bin/bash", "/locust-tasks/run.sh"]
 
