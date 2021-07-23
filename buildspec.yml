@@ -6,10 +6,8 @@ phases:
       - pip install --upgrade pip
       - pip install pyquery
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
       - docker login -u kqk51456 -p dt0c01.VJJWPO2IEIXX2BUTUW5GEDNJ.L4USS6LDB5Z5JRKUR65YKKFVTH7FWY6KLHL63WPC3J6ETCWGPJCMETA2TETDO4MD https://kqk51456.live.dynatrace.com
-      - COPY --from=https://kqk51456.live.dynatrace.com/linux/oneagent-codemodules:all
-      - ENV LD_PRELOAD /opt/dynatrace/oneagent/agent/lib64/liboneagentproc.so
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
   build:
     commands:
       - echo Build started on `date`
